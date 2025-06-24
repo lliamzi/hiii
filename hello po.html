@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For You, Always 🤍</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #000000;
+      color: #ffffff;
+      text-align: center;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background-color: #1a1a1a;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+      max-width: 600px;
+      width: 90%;
+    }
+    h1 {
+      color: #ffffff;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      animation: bounce 0.5s infinite alternate;
+    }
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      margin-bottom: 25px;
+      color: #f2f2f2;
+    }
+    .emoji {
+      font-size: 3em;
+      margin-top: 20px;
+      animation: pulse 1.5s infinite;
+    }
+    .button {
+      background-color: #ffffff;
+      color: #000000;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .button:hover {
+      background-color: #dddddd;
+      color: #000000;
+    }
+
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-10px); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2em;
+      }
+      p {
+        font-size: 1em;
+      }
+      .emoji {
+        font-size: 2.5em;
+      }
+      .button {
+        padding: 10px 20px;
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hey, You. Yes, You. </h1>
+    <p>I know things haven’t been perfect lately, but I want you to know something very real:</p>
+    <p>I love you. So, so much.</p>
+    <p>No matter how messy life gets, no matter how moody, tired, or sad you feel — I'm here. Every single time.</p>
+    <p>You’re not alone. You’ll never be alone — not as long as I’m breathing.</p>
+    <p>So cry if you need to. Be quiet if you need space. But always remember... someone out here is loving you loudly, even in your silence.</p>
+    <p>That someone is me. </p>
+    <a href="#" class="button" onclick="alert('Sending virtual hugs, forehead kisses, and all the love you forgot you deserved.')">Click if you need a hug </a>
+  </div>
+</body>
+</html>
