@@ -1,21 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>For You, Always</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      background-color: #000000;
-      color: #ffffff;
-      text-align: center;
-      padding: 50px;
+      font-family: 'Noto Sans', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      overflow: hidden;
+      height: 100vh;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      margin: 0;
+      position: relative;
     }
+
     .container {
       background-color: #1a1a1a;
       border-radius: 15px;
@@ -23,79 +30,86 @@
       box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
       max-width: 600px;
       width: 90%;
+      text-align: center;
+      z-index: 2;
+      position: relative;
     }
+
     h1 {
-      color: #ffffff;
-      font-size: 2.5em;
+      font-size: 2.2em;
       margin-bottom: 20px;
-      animation: bounce 0.5s infinite alternate;
     }
+
     p {
       font-size: 1.2em;
       line-height: 1.6;
       margin-bottom: 25px;
-      color: #f2f2f2;
     }
-    .emoji {
-      font-size: 3em;
-      margin-top: 20px;
-      animation: pulse 1.5s infinite;
-    }
+
     .button {
-      background-color: #ffffff;
-      color: #000000;
+      background-color: #fff;
+      color: #000;
       padding: 12px 25px;
       border: none;
       border-radius: 50px;
       font-size: 1.1em;
       cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease;
       text-decoration: none;
-      display: inline-block;
     }
+
     .button:hover {
-      background-color: #dddddd;
-      color: #000000;
+      background-color: #ddd;
     }
 
-    @keyframes bounce {
-      from { transform: translateY(0); }
-      to { transform: translateY(-10px); }
+    .heart {
+      position: absolute;
+      color: white;
+      font-size: 20px;
+      animation: floatUp linear infinite;
+      opacity: 0.6;
+      z-index: 1;
     }
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2em;
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 0.6;
       }
-      p {
-        font-size: 1em;
-      }
-      .emoji {
-        font-size: 2.5em;
-      }
-      .button {
-        padding: 10px 20px;
-        font-size: 1em;
+      100% {
+        transform: translateY(-10vh) scale(1.2);
+        opacity: 0;
       }
     }
   </style>
 </head>
 <body>
+
+  <!-- Floating hearts -->
+  <script>
+    for (let i = 0; i < 50; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.textContent = '🤍';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (4 + Math.random() * 6) + 's';
+      heart.style.fontSize = (12 + Math.random() * 18) + 'px';
+      heart.style.animationDelay = (Math.random() * 5) + 's';
+      document.body.appendChild(heart);
+    }
+  </script>
+
+  <!-- Letter content -->
   <div class="container">
-    <h1>Hey, You. Yes, You. </h1>
+    <h1>Hey, You. Yes, You behbeh. 🫵</h1>
     <p>I know things haven’t been perfect lately, but I want you to know something very real:</p>
-    <p>I love you. So, so much.</p>
+    <p>I care about you more than you know. ❤️</p>
     <p>No matter how messy life gets, no matter how moody, tired, or sad you feel, I'm here. Every single time.</p>
     <p>You’re not alone. You’ll never be alone, not as long as I’m breathing.</p>
-    <p>So cry if you need to. Be quiet if you need space. But always remember... someone out here is loving you loudly, even in your silence.</p>
-    <p>That someone is me. </p>
-    <a href="#" class="button" onclick="alert('Sending virtual hugs, forehead kisses, and all the love you forgot you deserved.')">Click if you need a hug </a>
+    <p>So cry if you need to. Be quiet if you need space. But always remember... someone out here is loving you loudly, even in your silence. 😉</p>
+    <p>That someone is me. 🥺</p>
+    <a href="#" class="button" onclick="alert('Sending virtual hugs, forehead kisses, and all the love you forgot you deserved. I love you po, and I really, truly mean it ❤️😚')">
+      Click if you need a hug
+    </a>
   </div>
 </body>
 </html>
